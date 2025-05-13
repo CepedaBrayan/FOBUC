@@ -1,0 +1,18 @@
+[
+  {
+    "type": "urban",
+    "name": "Urbanism",
+    "description": "Images about urban development...",
+    "photos": [
+      "photo-1"
+    ]
+  },
+  {
+    "type": "daily-life",
+    "name": "Daily Life",
+    "description": "Everyday life and people...",
+    "photos": [
+      "photo-2"
+    ]
+  }
+]
