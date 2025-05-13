@@ -1,0 +1,21 @@
+[
+  {
+    "id": "carlos-eslava",
+    "name": "Carlos Eslava",
+    "bio": "Photographer specialized in urban development...",
+    "photos": [
+      {
+        "id": "photo-1",
+        "category": "urban",
+        "year": 2022,
+        "url": "/img/photo1.jpg"
+      },
+      {
+        "id": "photo-2",
+        "category": "daily-life",
+        "year": 2021,
+        "url": "/img/photo2.jpg"
+      }
+    ]
+  }
+]
