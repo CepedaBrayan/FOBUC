@@ -1,6 +1,6 @@
 <script>
-  import Carousel from '$lib/components/Carousel.svelte';
-  import Navbar from '$lib/components/Navbar.svelte';
+  import Carousel from "$lib/components/Carousel.svelte";
+  import Navbar from "$lib/components/Navbar.svelte";
 </script>
 
 <header>
@@ -8,29 +8,35 @@
   <Carousel />
 </header>
 
-<main class="content">
-  <article>
-    <h2>CIUDAD Y MEMORIA: FOTOGRAFÍA HISTÓRICA DE BUCARAMANGA</h2>
-    <p>
-      Este sitio web es el resultado de un proyecto académico desarrollado como proyecto de grado por estudiantes universitarios,
-      cuyo propósito es investigar, recopilar y difundir fotografías históricas que documentan el desarrollo urbano, arquitectónico
-      y social de la ciudad de Bucaramanga.
-      <br><br>
-      El archivo reúne fotografías provenientes de distintos archivos y colecciones, nacionales e internacionales, con el fin de facilitar
-      el acceso visual a la memoria de una ciudad en transformación.
-      <br><br>
-      Este es un proyecto estrictamente académico, sin fines comerciales ni de lucro. Todas las fuentes han sido citadas y se ha procurado
-      e intentado solicitar autorización cuando ha sido requerida.
-    </p>
-  </article>
+<main>
+  <div class="content">
+    <article>
+      <h2>CIUDAD Y MEMORIA: FOTOGRAFÍA HISTÓRICA DE BUCARAMANGA</h2>
+      <p>
+        Este sitio web es el resultado de un proyecto académico desarrollado
+        como proyecto de grado por estudiantes universitarios, cuyo propósito es
+        investigar, recopilar y difundir fotografías históricas que documentan
+        el desarrollo urbano, arquitectónico y social de la ciudad de
+        Bucaramanga.
+        <br /><br />
+        El archivo reúne fotografías provenientes de distintos archivos y colecciones,
+        nacionales e internacionales, con el fin de facilitar el acceso visual a
+        la memoria de una ciudad en transformación.
+        <br /><br />
+        Este es un proyecto estrictamente académico, sin fines comerciales ni de
+        lucro. Todas las fuentes han sido citadas y se ha procurado e intentado solicitar
+        autorización cuando ha sido requerida.
+      </p>
+    </article>
 
-  <figure>
-    <img src="/img/secundary.jpg" alt="" />
-    <figcaption>
-      Autor: Horst Martin Schutkowski<br>
-      Fuente: Staatliche Kunstsammlungen Dresden – Deutsche Fotothek
-    </figcaption>
-  </figure>
+    <figure>
+      <img src="/img/right-lateral.avif" alt="" />
+      <figcaption>
+        Autor: Autor: Carlos Eslava Florez<br />
+        Fuente: Banco de la República, Biblioteca Virtual
+      </figcaption>
+    </figure>
+  </div>
 </main>
 
 <style>
@@ -41,6 +47,9 @@
     margin: 3rem auto;
     padding: 0 2rem;
     gap: 2rem;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
   }
 
   article {
@@ -50,14 +59,14 @@
   }
 
   h2 {
-    font-size: 1.1rem;
+    font-size: 1.8rem;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 700;
     margin-bottom: 1rem;
   }
 
   p {
-    font-size: 0.95rem;
+    font-size: 1.4rem;
     font-weight: 300;
     line-height: 1.6;
   }

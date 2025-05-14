@@ -2,28 +2,30 @@
   import { onDestroy, onMount } from 'svelte';
 
   let images = [
-    '/img/photo1.jpg',
-    '/img/photo2.jpg',
-    '/img/photo3.jpg'
+    '/img/carousel1.avif',
+    '/img/carousel2.avif',
+    '/img/carousel3.avif',
+    '/img/carousel4.avif',
+    '/img/carousel5.avif',
   ];
 
   let current = 0;
   let interval;
   let isPlaying = true;
-
+  const ms = 8000;
   const next = () => current = (current + 1) % images.length;
 
   const togglePlay = () => {
     if (isPlaying) {
       clearInterval(interval);
     } else {
-      interval = setInterval(next, 5000);
+      interval = setInterval(next, ms);
     }
     isPlaying = !isPlaying;
   };
 
   onMount(() => {
-    interval = setInterval(next, 5000);
+    interval = setInterval(next, ms);
   });
 
   onDestroy(() => {
@@ -35,10 +37,6 @@
   <img src={images[current]} alt="" />
   <div class="overlay">
     <h1>BIENVENIDO AL ARCHIVO FOTOGRÁFICO<br>DE BUCARAMANGA</h1>
-    <div class="credit">
-      Autor: Horst Martin Schutkowski<br>
-      Fuente: Staatliche Kunstsammlungen Dresden – Deutsche Fotothek
-    </div>
     <button class="pause-button" on:click={togglePlay}>{isPlaying ? '❚❚' : '▶'}</button>
   </div>
 </div>
@@ -47,13 +45,13 @@
   .carousel {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
   }
 
   .carousel img {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     object-fit: cover;
     filter: grayscale(100%);
   }
@@ -80,17 +78,7 @@
     margin-bottom: auto;
     padding-top: 25rem;
   }
-
-  .credit {
-    position: absolute;
-    bottom: 2rem;
-    right: 2rem;
-    font-size: 0.7rem;
-    font-family: sans-serif;
-    color: #ccc;
-    text-align: right;
-  }
-
+  
   .pause-button {
     position: absolute;
     bottom: 2rem;
