@@ -23,7 +23,7 @@
   }
 
   .logo {
-    height: 48px;
+    height: 88px;
     width: auto;
   }
 
