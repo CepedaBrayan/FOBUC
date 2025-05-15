@@ -1,6 +1,7 @@
 <script>
   import Carousel from "$lib/components/Carousel.svelte";
   import Navbar from "$lib/components/Navbar.svelte";
+  import OnePageView from "$lib/components/OnePageView.svelte";
 </script>
 
 <header>
@@ -9,9 +10,8 @@
 </header>
 
 <main>
-  <section class="page">
-    <!-- Text + Image -->
-    <div class="content">
+  <OnePageView>
+    <div class="city-and-memory-section">
       <article>
         <h2>CIUDAD Y MEMORIA: FOTOGRAFÍA HISTÓRICA DE BUCARAMANGA</h2>
         <p>
@@ -40,24 +40,31 @@
       </figure>
     </div>
 
-    <!-- Credits + Logo -->
     <div class="credits-section">
       <div class="team">
-        <h3>INTEGRANTES</h3>
-        <p>
-          Nelson Camilo Plata Patiño<br />
-          <strong>Email:</strong> nplata2@udi.edu.co
-        </p>
-        <p>
-          Jesús David Felizola Sánchez<br />
-          <strong>Email:</strong> jfelizola3@udi.edu.co
-        </p>
+        <div class="students">
+          <h3>INTEGRANTES</h3>
+          <div class="students-list">
+            <p>
+              Nelson Camilo Plata Patiño<br />
+              <strong>Email:</strong> nplata2@udi.edu.co
+            </p>
+            <p>
+              Jesús David Felizola Sánchez<br />
+              <strong>Email:</strong> jfelizola3@udi.edu.co
+            </p>
+          </div>
+        </div>
 
-        <h3>DIRECTORA DE PROYECTO DE GRADO</h3>
-        <p>
-          Liliana Cortés Garzón<br />
-          <strong>Email:</strong> lcortesgarzon@gmail.com
-        </p>
+        <div class="professors">
+          <h3>DIRECTORA DE PROYECTO DE GRADO</h3>
+          <div class="professors-list">
+            <p>
+              Liliana Cortés Garzón<br />
+              <strong>Email:</strong> lcortesgarzon@gmail.com
+            </p>
+          </div>
+        </div>
       </div>
 
       <div class="udi-logo">
@@ -67,7 +74,7 @@
         />
       </div>
     </div>
-  </section>
+  </OnePageView>
 </main>
 
 <style>
@@ -75,52 +82,49 @@
     height: 100vh;
   }
 
-  .page {
+  .city-and-memory-section {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-
-  .content {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 3rem auto;
-    padding: 0 2rem;
-    gap: 2rem;
-    height: 50%;
-    align-items: center;
-    justify-content: center;
+    height: 65vh;
+    width: 100%;
+    padding-left: 25vh;
+    box-sizing: border-box;
+    flex-direction: row;
   }
 
   article {
-    flex: 1 1 60%;
+    width: 60%;
+    height: 100%;
     font-family: sans-serif;
     color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     text-transform: uppercase;
-    font-weight: 700;
-    margin-bottom: 1rem;
+    font-weight: 500;
   }
 
   p {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     font-weight: 300;
     line-height: 1.6;
   }
 
   figure {
-    flex: 1 1 30%;
-    margin: 0;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
   }
 
   figure img {
-    width: 100%;
+    width: 55%;
     height: auto;
     display: block;
   }
@@ -131,30 +135,37 @@
     font-weight: 300;
     text-align: center;
     color: #444;
-    margin-top: 0.5rem;
   }
 
   .credits-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin: 3rem auto;
-    padding: 0 2rem;
-    border-top: 1px solid #ccc;
-    gap: 2rem;
-    flex-wrap: wrap;
+    padding-left: 25vh;
+    box-sizing: border-box;
+    flex-direction: row;
     background-color: #efeded;
-    height: 50%;
+    height: 35vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
 
   .team {
-    flex: 1;
     font-family: sans-serif;
+    color: #333;
+    display: flex;
+    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    width: 60%;
   }
 
   .team h3 {
     font-size: 1rem;
-    margin-bottom: 0.5rem;
     font-weight: 700;
     text-transform: uppercase;
   }
@@ -162,15 +173,51 @@
   .team p {
     font-size: 0.95rem;
     line-height: 1.5;
-    margin-bottom: 1rem;
   }
 
   .udi-logo {
     flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 100%;
   }
 
   .udi-logo img {
     width: 160px;
     height: auto;
+  }
+
+  .students-list,
+  .professors-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6rem;
+  }
+
+  .students,
+  .professors {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+  }
+
+  .students h3,
+  .professors h3 {
+    font-weight: 700;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  .students-list p,
+  .professors-list p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    text-align: left;
   }
 </style>
