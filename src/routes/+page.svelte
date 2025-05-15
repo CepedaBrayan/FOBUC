@@ -78,7 +78,7 @@
     </OnePageHorizontalSubView>
   </OnePageView>
 
-  <!-- Second section: cathegories and interviews -->
+  <!-- Second section: categories and interviews -->
   <OnePageView>
     <OnePageHorizontalSubView>Here we</OnePageHorizontalSubView>
     <OnePageHorizontalSubView>are</OnePageHorizontalSubView>
@@ -140,7 +140,6 @@
     font-family: sans-serif;
     color: #333;
     display: flex;
-    flex-direction: row;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -189,7 +188,7 @@
     height: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: left;
+    justify-content: flex-start;
   }
 
   .students h3,
