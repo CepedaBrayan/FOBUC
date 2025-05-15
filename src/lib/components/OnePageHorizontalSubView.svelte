@@ -2,20 +2,24 @@
   export let className = "";
 </script>
 
-<section class="one-page-horizontal-subview {className}">
+<section class={"one-page-horizontal-subview " + className}>
   <slot />
 </section>
 
 <style>
   :root {
-    --left-space: 25vh;
+    --left-space: 15vh;
   }
 
   .one-page-horizontal-subview {
     padding-left: var(--left-space);
+    padding-right: var(--left-space);
     box-sizing: border-box;
     display: flex;
+    flex-direction: column;
     width: 100%;
+    height: 100%; /* ensure it spans the whole parent */
+    margin: 0; /* ✅ prevent spacing */
   }
 
   .city-and-memory-section {
@@ -30,5 +34,16 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+  }
+
+  .categories-section {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* distribute .title and .list */
+  }
+
+  .fifty-fifty-2 {
+    height: 30vh;
   }
 </style>
