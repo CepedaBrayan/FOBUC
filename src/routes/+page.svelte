@@ -1,6 +1,7 @@
 <script>
   import Carousel from "$lib/components/Carousel.svelte";
   import Navbar from "$lib/components/Navbar.svelte";
+  import OnePageHorizontalSubView from "$lib/components/OnePageHorizontalSubView.svelte";
   import OnePageView from "$lib/components/OnePageView.svelte";
 </script>
 
@@ -10,8 +11,9 @@
 </header>
 
 <main>
+  <!-- First section: article and team -->
   <OnePageView>
-    <div class="city-and-memory-section">
+    <OnePageHorizontalSubView className="city-and-memory-section">
       <article>
         <h2>CIUDAD Y MEMORIA: FOTOGRAFÍA HISTÓRICA DE BUCARAMANGA</h2>
         <p>
@@ -38,9 +40,9 @@
           Fuente: Banco de la República, Biblioteca Virtual
         </figcaption>
       </figure>
-    </div>
+    </OnePageHorizontalSubView>
 
-    <div class="credits-section">
+    <OnePageHorizontalSubView className="credits-section">
       <div class="team">
         <div class="students">
           <h3>INTEGRANTES</h3>
@@ -73,22 +75,19 @@
           alt="UDI - Universidad de Investigación y Desarrollo"
         />
       </div>
-    </div>
+    </OnePageHorizontalSubView>
+  </OnePageView>
+
+  <!-- Second section: cathegories and interviews -->
+  <OnePageView>
+    <OnePageHorizontalSubView>Here we</OnePageHorizontalSubView>
+    <OnePageHorizontalSubView>are</OnePageHorizontalSubView>
   </OnePageView>
 </main>
 
 <style>
   main {
     height: 100vh;
-  }
-
-  .city-and-memory-section {
-    display: flex;
-    height: 65vh;
-    width: 100%;
-    padding-left: 25vh;
-    box-sizing: border-box;
-    flex-direction: row;
   }
 
   article {
@@ -135,20 +134,6 @@
     font-weight: 300;
     text-align: center;
     color: #444;
-  }
-
-  .credits-section {
-    padding-left: 25vh;
-    box-sizing: border-box;
-    flex-direction: row;
-    background-color: #efeded;
-    height: 35vh;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
   }
 
   .team {
