@@ -36,14 +36,29 @@
     flex-direction: column;
   }
 
-  .categories-section {
-    height: 70vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* distribute .title and .list */
+  .interviews-section {
+    height: 31vh;
+    align-items: center;
   }
 
-  .fifty-fifty-2 {
-    height: 30vh;
+  .more-than-photos-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .categories-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-section {
+    background-color: #f9f9f9;
+    font-family: sans-serif;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 </style>

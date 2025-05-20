@@ -1,12 +1,16 @@
 <script>
-  import { goto } from '$app/navigation';
+  import { goto } from "$app/navigation";
 </script>
 
 <nav>
-  <img src="/logo-bucaramanga.png" alt="Archivo Fotográfico de Bucaramanga" class="logo" />
+  <img
+    src="/logo-bucaramanga.png"
+    alt="Archivo Fotográfico de Bucaramanga"
+    class="logo"
+  />
   <div class="nav-links">
-    <button on:click={() => goto('/#categories')}>ARCHIVO</button>
-    <button on:click={() => goto('/authors')}>AUTORES</button>
+    <button on:click={() => goto("/#categories")}>ARCHIVO</button>
+    <button on:click={() => goto("/authors")}>AUTORES</button>
   </div>
 </nav>
 
@@ -19,7 +23,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 20;
+    z-index: 10;
+    background: transparent; /* o puedes agregar un fondo semitransparente */
   }
 
   .logo {
