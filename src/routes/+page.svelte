@@ -8,12 +8,14 @@
   import { photos } from "$lib/data/moreThan100Photos";
 </script>
 
-<header>
-  <Navbar />
-  <Carousel />
-</header>
-
 <main>
+  <OnePageView>
+    <div class="carousel-wrapper">
+      <Navbar />
+      <Carousel />
+    </div>
+  </OnePageView>
+
   <!-- First section: article and team -->
   <OnePageView>
     <OnePageHorizontalSubView className="city-and-memory-section">
@@ -186,6 +188,17 @@
 <style>
   main {
     height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+  }
+
+  .carousel-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 1;
   }
 
   .category-image {
@@ -412,26 +425,5 @@
     font-weight: 300;
     line-height: 1.7;
     margin: 0;
-  }
-
-  .more-than-title {
-    align-items: flex-start;
-    text-align: left;
-    height: 100%;
-    gap: 0, 5rem;
-  }
-
-  .photos-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 0.5rem;
-  }
-
-  .photos-subtitle {
-    font-size: 1.125rem;
-    color: #555;
-    text-transform: uppercase;
-    margin-bottom: 2rem;
   }
 </style>
