@@ -30,17 +30,10 @@
   .section-header {
     height: 20vh;
     text-align: left;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-  }
-
-  .ver-mas {
-    text-align: center;
-    height: 10vh;
   }
 
   .title {
+    padding-top: 5vh;
     font-size: 36px;
     font-weight: bold;
     text-transform: uppercase;
@@ -51,6 +44,11 @@
     font-size: 18px;
     color: #555;
     text-transform: uppercase;
+  }
+
+  .ver-mas {
+    text-align: center;
+    height: 10vh;
   }
 
   .photos-grid {
