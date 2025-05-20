@@ -500,12 +500,13 @@
     flex-direction: row;
     height: 50vh;
     width: 100%;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .footer-contacts,
   .footer-udi {
     flex: 1;
-    min-width: 250px;
   }
 
   .footer-contacts h3 {
@@ -521,10 +522,6 @@
     line-height: 1.6;
   }
 
-  .footer-udi img {
-    width: 100%;
-  }
-
   .footer-note {
     font-size: 0.85rem;
     color: #666;
@@ -534,7 +531,7 @@
 
   .footer-logo,
   .footer-udi {
-    width: 20vh;
+    width: 20%;
     height: 100%;
     display: flex;
     flex-direction: column;
