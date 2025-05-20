@@ -52,4 +52,10 @@
     display: flex;
     flex-direction: column;
   }
+
+  .footer-section {
+    background-color: #f9f9f9;
+    font-family: sans-serif;
+    color: #333;
+  }
 </style>
