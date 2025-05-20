@@ -36,6 +36,17 @@
     flex-direction: column;
   }
 
+  .interviews-section {
+    height: 31vh;
+    align-items: center;
+  }
+
+  .more-than-photos-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
   .categories-section {
     height: 100vh;
     display: flex;

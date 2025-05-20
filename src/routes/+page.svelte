@@ -1,8 +1,11 @@
 <script>
   import Carousel from "$lib/components/Carousel.svelte";
+  import InterviewContainer from "$lib/components/InterviewContainer.svelte";
+  import MoreThan100Photos from "$lib/components/MoreThan100Photos.svelte";
   import Navbar from "$lib/components/Navbar.svelte";
   import OnePageHorizontalSubView from "$lib/components/OnePageHorizontalSubView.svelte";
   import OnePageView from "$lib/components/OnePageView.svelte";
+  import { photos } from "$lib/data/moreThan100Photos";
 </script>
 
 <header>
@@ -90,39 +93,92 @@
             <div class="category-image">
               <img src="/img/urbanismo.avif" alt="Urbanismo" />
             </div>
-            <h3>Urbanismo</h3>
-            <p>
-              Explora la colección de fotografías urbanas, un testimonio visual
-              de la evolución de la planificación y estructural de la ciudad.
-              Descubre cómo cada imagen revela el impacto del urbanismo en el
-              entorno.
-            </p>
+            <div class="category-text">
+              <h3>Urbanismo</h3>
+              <p>
+                Explora la colección de fotografías urbanas, un testimonio
+                visual de la evolución de la planificación y estructural de la
+                ciudad. Descubre cómo cada imagen revela el impacto del
+                urbanismo en el entorno.
+              </p>
+            </div>
+            <div class="category-ver-mas">
+              <p>
+                <a href="/urbanismo">Ver más</a>
+              </p>
+            </div>
           </div>
 
           <div class="category">
             <div class="category-image">
               <img src="/img/arquitectura.avif" alt="Arquitectura" />
             </div>
-            <h3>Arquitectura</h3>
-            <p>
-              Sumérgete en nuestra colección de fotografías arquitectónicas,
-              donde cada imagen captura la transformación y los estilos que han
-              definido el paisaje urbano bumangués.
-            </p>
+            <div class="category-text">
+              <h3>Arquitectura</h3>
+              <p>
+                Sumérgete en nuestra colección de fotografías arquitectónicas,
+                donde cada imagen captura la transformación y los estilos que
+                han definido el paisaje urbano bumangués.
+              </p>
+            </div>
+            <div class="category-ver-mas">
+              <p>
+                <a href="/arquitectura">Ver más</a>
+              </p>
+            </div>
           </div>
 
           <div class="category category-right-side">
             <div class="category-image">
               <img src="/img/vida-cotidiana.avif" alt="Vida cotidiana" />
             </div>
-            <h3>Vida cotidiana</h3>
-            <p>
-              Donde cada imagen cuenta historias de personas, momentos y
-              tradiciones que dan forma al alma de la ciudad.
-            </p>
+            <div class="category-text">
+              <h3>Vida cotidiana</h3>
+              <p>
+                Donde cada imagen cuenta historias de personas, momentos y
+                tradiciones que dan forma al alma de la ciudad.
+              </p>
+            </div>
+            <div class="category-ver-mas">
+              <p>
+                <a href="/vida-cotidiana">Ver más</a>
+              </p>
+            </div>
           </div>
         </div>
       </div>
+    </OnePageHorizontalSubView>
+  </OnePageView>
+
+  <!-- Third section: interviews -->
+  <OnePageView>
+    <OnePageHorizontalSubView className="interviews-section"
+      ><InterviewContainer
+        image="/img/entrevista1.avif"
+        title="Gavassa"
+        subtitle="El Legado de Gavassa"
+      /></OnePageHorizontalSubView
+    >
+    <OnePageHorizontalSubView className="interviews-section"
+      ><InterviewContainer
+        image="/img/entrevista2.avif"
+        title="Gerardo Arenas"
+        subtitle="Gerardo Arenas"
+      /></OnePageHorizontalSubView
+    >
+    <OnePageHorizontalSubView className="interviews-section"
+      ><InterviewContainer
+        image="/img/entrevista3.avif"
+        title="Natalia Pinilla"
+        subtitle="Natalia Pinilla"
+      /></OnePageHorizontalSubView
+    >
+  </OnePageView>
+
+  <!-- Fourth section: more than 100 photos -->
+  <OnePageView>
+    <OnePageHorizontalSubView className="more-than-photos-section">
+      <MoreThan100Photos {photos} />
     </OnePageHorizontalSubView>
   </OnePageView>
 </main>
@@ -133,14 +189,28 @@
   }
 
   .category-image {
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #444;
+  }
+
+  .category-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 40vh;
+  }
+
+  .category-ver-mas {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 70%;
+    height: 20%;
   }
 
-  .category > p {
+  .category-text > p {
     font-size: 1.2rem;
     font-weight: 300;
     text-align: center;
@@ -320,22 +390,14 @@
     box-sizing: border-box;
     overflow: hidden;
     text-align: center;
-    height: 100%;
     padding: 1rem;
   }
 
-  .category-image {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 4px solid #444;
-  }
-
-  .category-image img {
-    width: 100%;
-    height: 100%;
+  .category-image > img {
+    height: 180px;
+    width: 180px;
     object-fit: cover;
+    object-position: 60% 40%;
   }
 
   .category h3 {
@@ -350,5 +412,26 @@
     font-weight: 300;
     line-height: 1.7;
     margin: 0;
+  }
+
+  .more-than-title {
+    align-items: flex-start;
+    text-align: left;
+    height: 100%;
+    gap: 0, 5rem;
+  }
+
+  .photos-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+
+  .photos-subtitle {
+    font-size: 1.125rem;
+    color: #555;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
   }
 </style>
