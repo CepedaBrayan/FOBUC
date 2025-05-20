@@ -78,7 +78,7 @@
     </OnePageHorizontalSubView>
   </OnePageView>
 
-  <!-- Second section: categories and interviews -->
+  <!-- Second section: categories -->
   <OnePageView>
     <OnePageHorizontalSubView className="categories-section">
       <div class="categories-container">
@@ -86,7 +86,7 @@
           <h2>CATEGORÍAS</h2>
         </div>
         <div class="categories-list">
-          <div class="category">
+          <div class="category category-left-side">
             <div class="category-image">
               <img src="/img/urbanismo.avif" alt="Urbanismo" />
             </div>
@@ -111,7 +111,7 @@
             </p>
           </div>
 
-          <div class="category">
+          <div class="category category-right-side">
             <div class="category-image">
               <img src="/img/vida-cotidiana.avif" alt="Vida cotidiana" />
             </div>
@@ -124,8 +124,6 @@
         </div>
       </div>
     </OnePageHorizontalSubView>
-    <OnePageHorizontalSubView className="fifty-fifty-2"
-    ></OnePageHorizontalSubView>
   </OnePageView>
 </main>
 
@@ -142,13 +140,8 @@
     height: 70%;
   }
 
-  .category-image > img {
-    width: 40%;
-    display: block;
-  }
-
   .category > p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 300;
     text-align: center;
   }
@@ -162,6 +155,9 @@
     text-align: center;
     height: 20%;
     justify-content: flex-start;
+    text-align: left;
+    margin-bottom: 2rem;
+    border-bottom: 3px solid #333;
   }
 
   .title h2 {
@@ -170,26 +166,12 @@
     font-weight: 500;
   }
 
-  .categories-list {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 8rem;
-    height: 80%;
+  .category-left-side {
+    border-right: 3px solid #333;
   }
 
-  .category {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-  }
-
-  .categories-container {
-    display: flex;
-    flex-direction: column;
+  .category-right-side {
+    border-left: 3px solid #333;
   }
 
   article {
@@ -316,154 +298,6 @@
     box-sizing: border-box;
   }
 
-  .title {
-    text-align: left;
-    margin-bottom: 2rem;
-  }
-
-  .title h2 {
-    font-size: 2rem;
-    text-transform: uppercase;
-    font-weight: 600;
-  }
-
-  .categories-list {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    gap: 2rem;
-    flex-wrap: wrap;
-    height: 100%;
-  }
-
-  .category {
-    flex: 1 1 250px;
-    max-width: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .category-image {
-    width: 100%;
-    aspect-ratio: 4/3;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 1rem;
-  }
-
-  .category-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-
-  .category h3 {
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    margin: 0.5rem 0;
-  }
-
-  .category p {
-    font-size: 0.95rem;
-    font-weight: 300;
-    line-height: 1.4;
-  }
-
-  .categories-container {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    overflow: hidden;
-  }
-
-  .title {
-    height: 20%;
-    display: flex;
-    align-items: center;
-    padding-left: 1rem;
-  }
-
-  .title h2 {
-    font-size: 1.8rem;
-    text-transform: uppercase;
-    font-weight: 600;
-    margin: 0;
-  }
-
-  .categories-list {
-    height: 80%;
-    display: flex;
-    justify-content: space-around;
-    align-items: stretch;
-    gap: 2rem;
-    padding: 0 1rem;
-    overflow: hidden;
-  }
-
-  .category {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 1rem;
-    box-sizing: border-box;
-    overflow: hidden;
-  }
-
-  .category-image {
-    width: 100%;
-    height: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-  }
-
-  .category-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .category h3 {
-    font-size: 1.2rem;
-    margin: 0.5rem 0 0;
-    text-transform: uppercase;
-    font-weight: 600;
-  }
-
-  .category {
-    margin: 0;
-    padding: 0.5rem;
-  }
-
-  .categories-container {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    overflow: hidden;
-  }
-
-  .title {
-    height: 20%;
-    display: flex;
-    align-items: center;
-    margin: 0;
-  }
-
-  .title h2 {
-    margin: 0;
-    font-size: 1.8rem;
-    text-transform: uppercase;
-    font-weight: 600;
-  }
-
   .categories-list {
     height: 80%;
     display: flex;
@@ -471,6 +305,10 @@
     align-items: center;
     padding: 0;
     margin: 0;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+    height: 100%;
   }
 
   .category {
@@ -482,15 +320,8 @@
     box-sizing: border-box;
     overflow: hidden;
     text-align: center;
-  }
-
-  .category-image {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-bottom: 0.5rem;
-    border: 3px solid white;
+    height: 100%;
+    padding: 1rem;
   }
 
   .category-image {
@@ -508,15 +339,16 @@
   }
 
   .category h3 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 600;
     text-transform: uppercase;
+    margin-bottom: 1.5rem;
   }
 
   .category p {
-    font-size: 0.95rem;
+    font-size: 1.2rem;
     font-weight: 300;
-    line-height: 1.4;
+    line-height: 1.7;
     margin: 0;
   }
 </style>

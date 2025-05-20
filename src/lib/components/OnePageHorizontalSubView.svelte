@@ -37,13 +37,8 @@
   }
 
   .categories-section {
-    height: 70vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* distribute .title and .list */
-  }
-
-  .fifty-fifty-2 {
-    height: 30vh;
   }
 </style>
