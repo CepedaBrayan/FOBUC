@@ -64,6 +64,9 @@
     object-fit: cover;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease;
+    display: block;
+    margin-bottom: 0;
+    break-inside: avoid;
   }
 
   .masonry img:hover {
@@ -73,13 +76,6 @@
   .masonry {
     column-count: 3;
     column-gap: 0;
-  }
-
-  .masonry img {
-    width: 100%;
-    display: block;
-    margin-bottom: 0;
-    break-inside: avoid;
   }
 
   .grid-title h2 {
