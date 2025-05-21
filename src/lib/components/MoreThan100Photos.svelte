@@ -16,9 +16,9 @@
     {/each}
   </div>
 
-  <div class="ver-mas">
+  <!-- <div class="ver-mas">
     <p><a href="/galeria">Ver más</a></p>
-  </div>
+  </div> -->
 </section>
 
 <style>
