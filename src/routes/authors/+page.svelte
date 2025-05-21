@@ -46,7 +46,7 @@
                   local y fortalecer la conexión entre el pasado y el presente.
                 </p>
                 <p class="see-more">
-                  <a href="/gavassa">VER FOTOGRAFÍAS</a>
+                  <a href="/legado-gavassa">VER FOTOGRAFÍAS</a>
                 </p>
               </div>
             </div>
