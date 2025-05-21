@@ -20,6 +20,10 @@
   </div>
 </a>
 
+<!-- I wrote this code with anger, pain and frustation. -->
+<!-- so in the moment of writing, just GOD and myself understand -->
+<!--   Now only GOD understands -->
+
 <style>
   .interview-card {
     display: flex;
