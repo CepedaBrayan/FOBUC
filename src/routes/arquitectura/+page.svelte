@@ -8,7 +8,6 @@
   });
 
   let images = Object.keys(modules).map((path, index) => {
-    // Corrige la ruta eliminando solo `/static`
     const publicPath = path.replace("/static", "");
     return {
       src: publicPath,
