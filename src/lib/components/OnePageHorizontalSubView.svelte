@@ -22,8 +22,20 @@
     margin: 0; /* ✅ prevent spacing */
   }
 
+  .fifty-fity {
+    height: 50%;
+  }
+
+  .forty {
+    height: 40%;
+  }
+
+  .seventy {
+    height: 70%;
+  }
+
   .city-and-memory-section {
-    height: 65vh;
+    height: 65%;
     flex-direction: row;
   }
 
