@@ -13,7 +13,7 @@
 
 <style>
   .second-header {
-    width: 100%;
+    width: 100vw;
     height: 30vh;
     position: relative;
     overflow: hidden;

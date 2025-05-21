@@ -168,7 +168,9 @@
   </OnePageView>
 
   <OnePageView>
-    <Footer />
+    <OnePageHorizontalSubView className="footer-section">
+      <Footer />
+    </OnePageHorizontalSubView>
   </OnePageView>
 </div>
 

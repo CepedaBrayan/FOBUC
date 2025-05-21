@@ -34,6 +34,10 @@
     height: 70%;
   }
 
+  .ten {
+    height: 10%;
+  }
+
   .city-and-memory-section {
     height: 65%;
     flex-direction: row;
@@ -72,5 +76,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .display-images-wrapper {
+    width: 100%;
+    height: auto;
+    padding: 2rem;
   }
 </style>
