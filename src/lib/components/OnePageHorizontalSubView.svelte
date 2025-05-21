@@ -34,11 +34,11 @@
     height: 70%;
   }
 
-  .ten {
+  <<<<<<< HEAD .ten {
     height: 10%;
   }
 
-  .city-and-memory-section {
+  =======>>>>>>>master .city-and-memory-section {
     height: 65%;
     flex-direction: row;
   }
