@@ -160,6 +160,7 @@
         image="/img/entrevista1.avif"
         title="Gavassa"
         subtitle="El Legado de Gavassa"
+        interviewURL="https://youtu.be/PbXvuEJUmAc?si=g0dzqxqQWAsPq24M"
       /></OnePageHorizontalSubView
     >
     <OnePageHorizontalSubView className="interviews-section"
@@ -167,6 +168,7 @@
         image="/img/entrevista2.avif"
         title="Gerardo Arenas"
         subtitle="Gerardo Arenas"
+        interviewURL="https://youtu.be/h99GRWVjLpw?si=Dv91r1P-2l3KN26z"
       /></OnePageHorizontalSubView
     >
     <OnePageHorizontalSubView className="interviews-section"
@@ -174,6 +176,7 @@
         image="/img/entrevista3.avif"
         title="Natalia Pinilla"
         subtitle="Natalia Pinilla"
+        interviewURL="https://youtu.be/bJsqgOCFOSM?si=7_uY1Cr9qhn0TOo1"
       /></OnePageHorizontalSubView
     >
   </OnePageView>

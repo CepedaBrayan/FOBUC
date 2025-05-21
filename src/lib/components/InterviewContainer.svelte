@@ -2,9 +2,15 @@
   export let image;
   export let title;
   export let subtitle;
+  export let interviewURL;
 </script>
 
-<div class="interview-card">
+<a
+  href={interviewURL}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="interview-card"
+>
   <div class="interview-text">
     <h2>ENTREVISTA</h2>
     <h3>{subtitle}</h3>
@@ -12,7 +18,7 @@
   <div class="interview-image">
     <img src={image} alt={title} />
   </div>
-</div>
+</a>
 
 <style>
   .interview-card {
@@ -24,6 +30,12 @@
     overflow: hidden;
     height: 100%;
     width: 65%;
+    text-decoration: none;
+  }
+
+  .interview-card:hover {
+    cursor: pointer;
+    background-color: #333;
   }
 
   .interview-text {
