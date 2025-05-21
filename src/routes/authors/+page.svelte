@@ -144,6 +144,30 @@
   </OnePageView>
 
   <OnePageView>
+    <OnePageHorizontalSubView>
+      <div class="donation-section">
+        <div class="donation-text">
+          <h2 class="donation-title">DONACIÓN DE FOTOGRAFÍAS</h2>
+          <p>
+            Para expandir nuestra búsqueda y recopilar documentación
+            fotográfica, recolectamos fotografías de conocidos, amigos, personas
+            cercanas que estuviesen interesadas en dar a conocer y documentar
+            sus fotografías familiares y cotidianas, agradecemos a estas
+            personas por aportar y ser parte de un proyecto que apoya la
+            conservación de la memoria y cultura, estas fotografías también
+            toman lugar en municipios cercanos a Bucaramanga.
+          </p>
+          <p class="donation-author">Luis Alfredo Romero García</p>
+          <p class="donation-author">Familia Landazábal</p>
+          <p class="see-more">
+            <a href="/donaciones">VER FOTOGRAFÍAS</a>
+          </p>
+        </div>
+      </div>
+    </OnePageHorizontalSubView>
+  </OnePageView>
+
+  <OnePageView>
     <Footer />
   </OnePageView>
 </div>
@@ -157,13 +181,13 @@
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE y Edge */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     font-size: 0.95rem;
   }
 
   .authors-page::-webkit-scrollbar {
-    display: none; /* Chrome/Safari */
+    display: none;
   }
 
   .first-subpage-wrapper {
@@ -171,35 +195,58 @@
   }
 
   .authors-content {
-    padding: 1rem;
+    padding: 1rem 0rem 1rem 0rem;
     width: 100%;
-    height: 60%;
+    height: auto;
+    box-sizing: border-box;
   }
 
   .authors-content h2 {
-    text-align: right;
+    margin-bottom: 0.5rem;
   }
 
   .authors-content hr {
     border: none;
     border-top: 1px solid #888;
+    margin-bottom: 2rem;
   }
 
   .author-section {
     background-color: white;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   }
 
   .author-flex {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
+    align-items: flex-start;
+  }
+
+  .logo-and-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    min-width: 150px;
+    flex-shrink: 0;
+    text-align: center;
   }
 
   .author-image {
     width: 150px;
     height: auto;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+  }
+
+  .credits {
+    font-size: 0.75rem;
+    color: #777;
+    line-height: 1.3;
+    margin-top: 0.5rem;
   }
 
   .author-text {
@@ -210,31 +257,54 @@
   .author-text h3 {
     margin-top: 0;
     font-size: 1.8rem;
+    margin-bottom: 0.3rem;
   }
 
   .author-text p {
     text-align: justify;
     line-height: 1.6;
+    margin-bottom: 1rem;
   }
 
   .see-more a {
     display: inline-block;
-    margin-top: 0.5rem;
     text-decoration: none;
     font-weight: bold;
     border-bottom: 2px solid #333;
     color: #000;
+    transition: color 0.2s ease;
   }
 
-  .credits {
-    font-size: 0.75rem;
-    color: #777;
+  .see-more a:hover {
+    color: #555;
   }
 
-  .logo-and-text {
+  .donation-section {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 20%;
+    justify-content: center;
+    padding: 2rem 1rem;
+    font-family: monospace;
+  }
+
+  .donation-text {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .donation-title {
+    font-size: 2rem;
+  }
+
+  .donation-text p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 3rem;
+  }
+
+  .donation-author {
+    font-weight: bold;
+    color: #444;
   }
 </style>
