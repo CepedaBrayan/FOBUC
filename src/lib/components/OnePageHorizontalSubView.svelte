@@ -22,7 +22,7 @@
     margin: 0; /* ✅ prevent spacing */
   }
 
-  .fifty-fity {
+  .fifty-fifty {
     height: 50%;
   }
 
