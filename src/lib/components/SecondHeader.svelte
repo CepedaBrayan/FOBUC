@@ -1,9 +1,10 @@
 <script>
   import { goto } from "$app/navigation";
+  export let backRoute = "/"; // default to home if not provided
 </script>
 
 <div class="second-header">
-  <button class="back-button" on:click={() => goto("/")}>Volver</button>
+  <button class="back-button" on:click={() => goto(backRoute)}>Volver</button>
 
   <div class="header">
     <img src="/img/second-header.avif" alt="Header" class="header-image" />
