@@ -22,7 +22,7 @@
     margin: 0; /* ✅ prevent spacing */
   }
 
-  .fifty-fity {
+  .fifty-fifty {
     height: 50%;
   }
 
@@ -32,6 +32,10 @@
 
   .seventy {
     height: 70%;
+  }
+
+  .ten {
+    height: 10%;
   }
 
   .city-and-memory-section {
@@ -72,5 +76,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .display-images-wrapper {
+    width: 100%;
+    height: auto;
+    padding: 2rem;
   }
 </style>
