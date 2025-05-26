@@ -56,6 +56,12 @@
     display: none;
   }
 
+  .masonry {
+    column-count: 3;
+    column-gap: 1rem; /* spacing between columns */
+    padding: 0 1rem; /* horizontal padding inside masonry container */
+  }
+
   .masonry img {
     width: 100%;
     height: auto;
@@ -64,17 +70,12 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease;
     display: block;
-    margin-bottom: 0;
+    margin-bottom: 1rem; /* spacing between images vertically */
     break-inside: avoid;
   }
 
   .masonry img:hover {
     transform: scale(1.03);
-  }
-
-  .masonry {
-    column-count: 3;
-    column-gap: 0;
   }
 
   .grid-title h2 {
