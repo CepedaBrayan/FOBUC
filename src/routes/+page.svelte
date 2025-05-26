@@ -58,8 +58,8 @@
               <strong>Email:</strong> nplata2@udi.edu.co
             </p>
             <p>
-              Jesús David Felizola Sánchez<br />
-              <strong>Email:</strong> jfelizola3@udi.edu.co
+              Jesús David Felizzola Sánchez<br />
+              <strong>Email:</strong> jfelizzola3@udi.edu.co
             </p>
           </div>
         </div>

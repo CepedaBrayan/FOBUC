@@ -57,6 +57,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     padding: 1rem;
+    gap: 1rem; /* <-- Añadido */
   }
 
   .photo-card {

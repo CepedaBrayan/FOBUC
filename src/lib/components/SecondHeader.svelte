@@ -8,7 +8,7 @@
 
   <div class="header">
     <img src="/img/second-header.avif" alt="Header" class="header-image" />
-    <h1 class="logo">FO<span class="bold-b">B</span>UC</h1>
+    <img src="/logo-bucaramanga.png" alt="Logo" class="logo-bucaramanga" />
   </div>
 </div>
 
@@ -47,6 +47,9 @@
     overflow: hidden;
     border-radius: 8px;
     z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .header-image {
@@ -59,19 +62,13 @@
     -webkit-filter: blur(1px);
   }
 
-  .logo {
+  .logo-bucaramanga {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: white;
-    text-shadow: 1px 1px 4px black;
-  }
-
-  .bold-b {
-    font-weight: normal;
-    font-size: 3rem;
+    width: 300px; /* increase size as needed */
+    height: auto;
+    z-index: 10;
   }
 </style>
