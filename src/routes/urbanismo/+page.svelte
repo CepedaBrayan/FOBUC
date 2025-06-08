@@ -13,7 +13,7 @@
     return {
       src: publicPath,
       alt: `Imagen ${index + 1}`,
-      title: `Imagen ${index + 1}`,
+      title: fileName,
       fileName,
     };
   });
