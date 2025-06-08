@@ -8,13 +8,27 @@
   });
 
   let images = Object.keys(modules).map((path, index) => {
-    // Corrige la ruta eliminando solo `/static`
     const publicPath = path.replace("/static", "");
+    const fileName = publicPath.split("/").pop().replace(".avif", "");
     return {
       src: publicPath,
       alt: `Imagen ${index + 1}`,
+      title: fileName,
+      fileName,
     };
   });
+
+  let modalOpen = false;
+  let modalSrc = "";
+
+  function openModal(fileName) {
+    modalSrc = `/img/donaciones/spec-images/${fileName}.jpg`;
+    modalOpen = true;
+  }
+
+  function closeModal() {
+    modalOpen = false;
+  }
 </script>
 
 <div class="donaciones-page">
@@ -28,8 +42,8 @@
       <hr />
     </div>
     <div class="masonry">
-      {#each images as { src, alt }}
-        <img {src} {alt} />
+      {#each images as { src, alt, title, fileName }}
+        <img {src} {alt} {title} on:click={() => openModal(fileName)} />
       {/each}
     </div>
   </OnePageHorizontalSubView>
@@ -37,6 +51,15 @@
   <OnePageHorizontalSubView className="footer-section">
     <Footer />
   </OnePageHorizontalSubView>
+
+  {#if modalOpen}
+    <div class="modal-overlay" on:click={closeModal}>
+      <div class="modal-content" on:click|stopPropagation>
+        <img src={modalSrc} alt="Modal image" />
+        <button class="close-btn" on:click={closeModal}>×</button>
+      </div>
+    </div>
+  {/if}
 </div>
 
 <style>
@@ -87,5 +110,47 @@
     border: none;
     border-top: 1px solid #888;
     margin-bottom: 2rem;
+  }
+
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+
+  .modal-content {
+    position: relative;
+    background: white;
+    padding: 1rem;
+    border-radius: 12px;
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modal-content img {
+    max-width: 100%;
+    max-height: 90vh;
+    border-radius: 8px;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.75rem;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
   }
 </style>
