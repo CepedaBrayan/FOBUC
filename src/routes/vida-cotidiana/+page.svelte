@@ -13,6 +13,7 @@
     return {
       src: publicPath,
       alt: `Imagen ${index + 1}`,
+      title: `Imagen ${index + 1}`,
       fileName,
     };
   });
@@ -41,8 +42,8 @@
       <hr />
     </div>
     <div class="masonry">
-      {#each images as { src, alt, fileName }}
-        <img {src} {alt} on:click={() => openModal(fileName)} />
+      {#each images as { src, alt, title, fileName }}
+        <img {src} {alt} {title} on:click={() => openModal(fileName)} />
       {/each}
     </div>
   </OnePageHorizontalSubView>
