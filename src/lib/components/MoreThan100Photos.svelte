@@ -1,5 +1,17 @@
 <script>
   export let photos = []; // Array de objetos { src, alt }
+
+  let modalOpen = false;
+  let modalSrc = "";
+
+  function openModal(fileName) {
+    modalSrc = `/img/more-than/spec-images/${fileName}.jpg`;
+    modalOpen = true;
+  }
+
+  function closeModal() {
+    modalOpen = false;
+  }
 </script>
 
 <section class="photos-section">
@@ -11,14 +23,23 @@
   <div class="photos-grid">
     {#each photos as photo, i}
       <div class="photo-card {i === 0 ? 'photo-tall' : ''}">
-        <img src={photo.src} alt={photo.alt} class="photo-image" />
+        <img
+          src={photo.src}
+          class="photo-image"
+          on:click={() => openModal(photo.alt)}
+        />
       </div>
     {/each}
   </div>
 
-  <!-- <div class="ver-mas">
-    <p><a href="/galeria">Ver más</a></p>
-  </div> -->
+  {#if modalOpen}
+    <div class="modal-overlay" on:click={closeModal}>
+      <div class="modal-content" on:click|stopPropagation>
+        <img src={modalSrc} alt="Modal image" />
+        <button class="close-btn" on:click={closeModal}>×</button>
+      </div>
+    </div>
+  {/if}
 </section>
 
 <style>
@@ -44,11 +65,6 @@
     font-size: 18px;
     color: #555;
     text-transform: uppercase;
-  }
-
-  .ver-mas {
-    text-align: center;
-    height: 10vh;
   }
 
   .photos-grid {
@@ -79,5 +95,47 @@
 
   .photo-tall {
     grid-row: span 2;
+  }
+
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+
+  .modal-content {
+    position: relative;
+    background: white;
+    padding: 1rem;
+    border-radius: 12px;
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modal-content img {
+    max-width: 100%;
+    max-height: 90vh;
+    border-radius: 8px;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.75rem;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
   }
 </style>
